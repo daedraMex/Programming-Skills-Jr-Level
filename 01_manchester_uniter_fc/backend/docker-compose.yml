@@ -6,10 +6,10 @@ services:
     image: mysql
     restart: always
     environment:
-      MYSQL_DATABASE: manchesterDatabase
-      MYSQL_ROOT_PASSWORD: 1234567890
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
 
     volumes:
       - ~/app/manchester-db:/var/lib/mysql
     ports:
-      - 9090:3306
+      - ${MYSQL_PORT}:${DOCKER_MYSQL_PORT}

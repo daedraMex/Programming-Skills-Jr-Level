@@ -10,6 +10,6 @@ services:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
 
     volumes:
-      - ~/app/manchester-db:/var/lib/mysql
+      - ./manchester-db:/var/lib/mysql
     ports:
       - ${MYSQL_PORT}:${DOCKER_MYSQL_PORT}
